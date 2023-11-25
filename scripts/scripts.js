@@ -12,12 +12,7 @@ You are encouraged to use the provided naming convention for ease of review.
 // INSERT YOUR CODE HERE
 
 let modelName = "Model XYZ";
-console.log(`model is ${modelName}`);
 let duration = 0;
-console.log(`duration is ${duration}`);
-
-
-
 
 /****************** helper function ******************/
 /* create a function called recalculate() which will
@@ -34,8 +29,7 @@ console.log(`duration is ${duration}`);
 window.onload = function recalculate()
 {
 let costLabel = document.getElementById("calculated-cost").textContent;
-console.log(`costLabel is ${costLabel}`);
-
+    console.log(costLabel);
     if(modelName == "Model XYZ")
     {
         document.getElementById('calculated-cost').textContent = duration * 100;
@@ -43,7 +37,7 @@ console.log(`costLabel is ${costLabel}`);
     else{
         document.getElementById('calculated-cost').textContent = duration * 213;
     }
-}
+};
 
 
 /****************** model button logic ******************/
@@ -67,15 +61,13 @@ document.getElementById("model-button").onclick = function changeModel()
     if(modelName == "Model XYZ")
     {
         document.getElementById('model-text').textContent = "Model CPRG";
-        modelName = "Model CPRG"
-        console.log(`model is ${modelName}`);
+        modelName = "Model CPRG";
     }
         
     else
     {
         document.getElementById('model-text').textContent = "Model XYZ";
-        modelName = "Model XYZ"
-        console.log(`model is ${modelName}`);
+        modelName = "Model XYZ";
     }
 
     if(modelName == "Model XYZ")
@@ -86,7 +78,7 @@ document.getElementById("model-button").onclick = function changeModel()
         document.getElementById('calculated-cost').textContent = duration * 213;
     }
     
- }
+ };
  
 /****************** duration button logic ******************/
 /*  - first, create a variable to represent the "Change Duration" pseudo-button.
@@ -102,8 +94,7 @@ document.getElementById("model-button").onclick = function changeModel()
 // INSERT YOUR CODE HERE
 document.getElementById("duration-button").onclick = function changeDuration()
 {
-duration = window.prompt(`Enter your duration`);
-console.log(`duration is ${duration}`);
+duration = Number(window.prompt("Enter duration", ""));
 
 document.getElementById('duration-text').textContent = duration;
 if(modelName == "Model XYZ")
@@ -113,6 +104,6 @@ if(modelName == "Model XYZ")
     else{
         document.getElementById('calculated-cost').textContent = duration * 213;
     }
-}
-
+};
+/*Taylor Crowe CPRG-213F 000612584*/
 
